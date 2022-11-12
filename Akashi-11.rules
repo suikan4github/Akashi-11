@@ -1,0 +1,106 @@
+
+(rules PCB Akashi-11
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 8)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.0)
+    (clear 125.0 (type smd_to_turn_gap))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-+3V3" "Via[0-1]_800:400_um" +3V3
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    +3V3 "Via[0-1]_800:400_um-+3V3"
+  )
+  (class default
+    GND +3V3 +BATT "-2V5" "unconnected-(CN7-Pad4)" "unconnected-(CN7-Pad5)" "unconnected-(CN7-Pad6)" "unconnected-(CN7-Pad7)"
+    "Net-(C4-Pad1)" "unconnected-(CN7-Pad9)" "unconnected-(CN7-Pad10)" "unconnected-(CN7-Pad11)" "Net-(C4-Pad2)" "unconnected-(CN7-Pad13)" +24V "unconnected-(CN7-Pad15)"
+    "unconnected-(CN7-Pad17)" "unconnected-(CN7-Pad18)" /LOAD "Net-(CN7-Pad2)" "unconnected-(CN7-Pad21)" /BLANK "unconnected-(CN7-Pad23)" "unconnected-(CN7-Pad24)"
+    "unconnected-(CN7-Pad25)" "unconnected-(CN7-Pad26)" "unconnected-(CN7-Pad27)" "unconnected-(CN7-Pad28)" "unconnected-(CN7-Pad29)" "unconnected-(CN7-Pad30)" "unconnected-(CN7-Pad31)" "unconnected-(CN7-Pad32)"
+    "unconnected-(CN7-Pad33)" "unconnected-(CN7-Pad34)" "unconnected-(CN7-Pad35)" "unconnected-(CN7-Pad36)" "unconnected-(CN7-Pad37)" "unconnected-(CN7-Pad38)" "unconnected-(CN10-Pad1)" "unconnected-(CN10-Pad2)"
+    "unconnected-(CN10-Pad3)" "unconnected-(CN10-Pad4)" "unconnected-(CN10-Pad5)" "unconnected-(CN10-Pad6)" "unconnected-(CN10-Pad7)" "unconnected-(CN10-Pad8)" "Net-(CN7-Pad14)" "unconnected-(CN10-Pad10)"
+    /D0 "/SPI1_MOSI" /D1 "unconnected-(CN10-Pad14)" "/TIM1_CH1N" /D2 /D3 "unconnected-(CN10-Pad18)"
+    /D4 "/TIM2_CH1" /D5 "/TIM1_CH1" /D6 /D7 /D8 "unconnected-(CN10-Pad26)"
+    /KEY3 "unconnected-(CN10-Pad28)" /KEY2 "unconnected-(CN10-Pad30)" /KEY1 "/SPI1_SCK" "Net-(D3-Pad1)" "unconnected-(CN10-Pad34)"
+    "unconnected-(CN10-Pad35)" /H1 "unconnected-(CN10-Pad37)" "unconnected-(CN10-Pad38)" /H2 "/Seg_a" "unconnected-(J1-Pad4)" "/Seg_g"
+    "/Seg_f" "/Seg_e" "/Seg_d" /DP "/Seg_c" "unconnected-(J1-Pad30)" "unconnected-(J1-Pad32)" "/Seg_b"
+    "unconnected-(J1-Pad34)" "unconnected-(J1-Pad36)" "unconnected-(J1-Pad37)" "unconnected-(J1-Pad39)" "Net-(L1-Pad2)" "Net-(L2-Pad2)" "Net-(R2-Pad2)" "Net-(R4-Pad2)"
+    "unconnected-(U1-Pad2)" "unconnected-(U1-Pad3)" "unconnected-(U1-Pad4)" "unconnected-(U1-Pad5)" "unconnected-(U1-Pad6)" "unconnected-(U1-Pad7)" "unconnected-(U1-Pad8)" "unconnected-(U1-Pad9)"
+    "unconnected-(U1-Pad10)" "unconnected-(U1-Pad11)" "unconnected-(U1-Pad12)" "unconnected-(U1-Pad13)" "unconnected-(U1-Pad14)" "unconnected-(U1-Pad15)" "unconnected-(U1-Pad16)" "unconnected-(U1-Pad17)"
+    "unconnected-(U1-Pad19)" "unconnected-(U1-Pad28)" "unconnected-(U1-Pad29)" "unconnected-(U3-Pad3)" "unconnected-(U3-Pad5)" /KD0 /KD1 /KD2
+    /KD3 /KD4 /KD5 /KD6 /KD7 /KD8
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class +3V3
+    (clearance_class +3V3)
+    (via_rule +3V3)
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
