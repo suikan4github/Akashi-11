@@ -34,3 +34,5 @@ Signal assignment of Nucleo is as following :
 | TIM1_CH1 | PA8 |
 | TIM1_CH1N | PA7 |
 | TIM2_CH1 | PA9 |
+| EN24 | PC11 |
+| STATUS | PD2 |
