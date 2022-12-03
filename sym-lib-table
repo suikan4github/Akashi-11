@@ -3,4 +3,5 @@
   (lib (name "MA6934AQH")(type "KiCad")(uri "${KIPRJMOD}/lib/MAX6934AQH.kicad_sym")(options "")(descr ""))
   (lib (name "TLV61046ADBVT")(type "KiCad")(uri "${KIPRJMOD}/lib/TLV61046ADBVT.kicad_sym")(options "")(descr ""))
   (lib (name "LQH5BPN100M")(type "KiCad")(uri "${KIPRJMOD}/lib/LQH5BPN100M38L.kicad_sym")(options "")(descr ""))
+  (lib (name "RPI_PICO")(type "KiCad")(uri "${KIPRJMOD}/lib/RPi_Pico.kicad_sym")(options "")(descr ""))
 )
